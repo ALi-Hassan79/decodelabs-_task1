@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RuleBot — a rule-based chatbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="mark">🤖 RuleBot</div>
+      <div class="sub" id="subLabel">if / else — decision engine</div>
+    </div>
+    <div class="history-head" id="historyLabel">ASKED SO FAR</div>
+    <div class="history-list" id="historyList">
+      <div class="history-empty" id="historyEmpty">Nothing yet. Say hello to start.</div>
+    </div>
+    <div class="sidebar-foot">
+      <button class="clear-btn" id="clearBtn">CLEAR HISTORY</button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main">
+    <div class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle history">☰</button>
+      <h1 id="topbarTitle">Talking to <b>RuleBot</b></h1>
+      <select class="lang-select" id="langSelect">
+        <option value="en">English</option>
+        <option value="ur">اردو (Urdu)</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية (Arabic)</option>
+      </select>
+    </div>
+
+    <div class="thread" id="thread"></div>
+
+    <div class="hint-row" id="hintRow"></div>
+
+    <div class="composer">
+      <input type="text" id="input" placeholder="Type a message..." autocomplete="off">
+      <button id="sendBtn">Send</button>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>
